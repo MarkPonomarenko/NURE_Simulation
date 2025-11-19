@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!DOCTYPE search SYSTEM "behaviorsearch.dtd">
+<search>
+    <bsearchVersionNumber>1,10</bsearchVersionNumber>
+    <modelInfo>
+        <modelFile>E:\Downloads\Traffic Grid.nlogox</modelFile>
+        <modelSetupCommands>setup</modelSetupCommands>
+        <modelStepCommands>go</modelStepCommands>
+        <modelStopCondition/>
+        <modelStepLimit>500</modelStepLimit>
+        <modelMetricReporter>num-cars-stopped</modelMetricReporter>
+        <modelMeasureIf>true</modelMeasureIf>
+    </modelInfo>
+    <fitnessInfo>
+        <fitnessMinimized>false</fitnessMinimized>
+        <fitnessCollecting>MEAN_ACROSS_STEPS</fitnessCollecting>
+        <fitnessSamplingReplications>10</fitnessSamplingReplications>
+        <fitnessCombineReplications>MEAN</fitnessCombineReplications>
+    </fitnessInfo>
+    <searchSpace>
+        <paramSpec>["speed-limit" [0.1 0.1 1]]</paramSpec>
+        <paramSpec>["num-cars" 100]</paramSpec>
+        <paramSpec>["power?" true false]</paramSpec>
+    </searchSpace>
+    <searchMethod type="StandardGA">
+        <searchMethodParameter name="mutation-rate" value="0.01"/>
+        <searchMethodParameter name="population-size" value="50"/>
+        <searchMethodParameter name="crossover-rate" value="1"/>
+        <searchMethodParameter name="population-model" value="generational"/>
+        <searchMethodParameter name="tournament-size" value="3"/>
+    </searchMethod>
+    <chromosomeRepresentation type="StandardBinaryChromosome"/>
+    <caching>true</caching>
+    <evaluationLimit>300</evaluationLimit>
+    <bestCheckingNumReplications>0</bestCheckingNumReplications>
+</search>

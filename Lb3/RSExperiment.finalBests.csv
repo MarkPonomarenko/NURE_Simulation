@@ -1,0 +1,2 @@
+"search-number","evaluation","grid-size-x*","grid-size-y*","speed-limit*","num-cars*","ticks-per-cycle*","current-auto?*","power?*","num-replicates","best-fitness-so-far"
+"1","320","5","5","1","200","20","true","false","10","175.23752495009975"
